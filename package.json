@@ -1,0 +1,55 @@
+{
+  "name": "bienes_raices_mvc",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto de Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch",
+    "js": "webpack --watch",
+    "dev": "concurrently \"npm run css\" \"npm run js\"",
+    "db:importar": "node ./seed/seeder.js -i",
+    "db:eliminar": "node ./seed/seeder.js -e",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "MVC",
+    "Pug",
+    "Tailwind",
+    "MySQL",
+    "Sequelize"
+  ],
+  "author": "Gotyan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.4.7",
+    "dropzone": "^5.9.3",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.12.0",
+    "nodemailer": "^6.9.16",
+    "picocolors": "^1.1.1",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.17",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
